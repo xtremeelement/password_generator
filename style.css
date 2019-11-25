@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 50%;
+}
+
+.passwordBox {
+  border: 2px dashed lightslategray;
+  width: 100vw;
+  height: 100px;
+  text-align: center;
+}
+
+hr {
+  width: 100vw;
+  color: black;
+}
+
+.centerMe {
+  align-items: center;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+}
+
+.passwordDiv {
+  margin-top: 40px;
+}
+
+.btn {
+  margin: 0 auto;
+}
+
+.button2 {
+  background: lightslategray;
+  color: white;
+}
