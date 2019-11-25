@@ -78,6 +78,7 @@ function copyclipboard() {
   copyText.select();
   document.execCommand("copy");
   alert(`Copied the text: ${copyText.value}`);
+  document.querySelector(".button2").style.backgroundColor = "lightslategray";
 }
 
 function resetFields() {
