@@ -57,9 +57,9 @@ document.querySelector(".button1").addEventListener("click", () => {
 //       charSet += numbersSet;
 //     }
 //   }
+//Calls the function that generates the password and displays
 //   passwordGenerator(numbers);
 // }
-//Calls the function that generates the password and disiplays
 
 //This function generates a random password and displays it.
 function passwordGenerator(length) {
