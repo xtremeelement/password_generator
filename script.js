@@ -9,7 +9,6 @@ var reset = "";
 
 //Function prompts user for password length and parameters with eventlistener
 document.querySelector(".button1").addEventListener("click", () => {
-  charSet = "";
   numbers = prompt("How long do you want your password?");
   if (numbers < 8) {
     alert("Password must be greater than 8 characters");
@@ -35,7 +34,6 @@ document.querySelector(".button1").addEventListener("click", () => {
 });
 // Function prompts user for password length and parameters with onclick in html tag
 // function question() {
-//   charSet = "";
 //   numbers = prompt("How long do you want your password?");
 //   if (numbers < 8) {
 //     alert("Password must be greater than 8 characters");
@@ -71,7 +69,7 @@ function passwordGenerator(length) {
     document.querySelector(".button2").style.backgroundColor = "red";
   }
   //Resets for next random generated password
-  yourPassword = "";
+  resetFields();
 }
 
 //Copies password to clipboard
@@ -80,4 +78,9 @@ function copyclipboard() {
   copyText.select();
   document.execCommand("copy");
   alert(`Copied the text: ${copyText.value}`);
+}
+
+function resetFields() {
+  yourPassword = "";
+  charSet = "";
 }
