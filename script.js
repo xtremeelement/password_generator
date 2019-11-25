@@ -9,6 +9,7 @@ var reset = "";
 
 // Function prompst user for password length
 function question() {
+  charSet = "";
   numbers = prompt("How long do you want your password?");
   if (numbers < 8) {
     alert("Password must be greater than 8 characters");
