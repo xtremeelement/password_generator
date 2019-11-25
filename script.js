@@ -2,28 +2,30 @@ const charSet =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01233456789";
 var yourPassword = "";
 var numbers;
+var reset = "";
 
 // Function prompst user for password length
 function question() {
-  numbers = prompt("How long do you want your passowrd?");
+  numbers = prompt("How long do you want your password?");
+
   //Calls the function that generates the password and disiplays
   passwordGenerator(numbers);
 }
 
 //This function generates a random password and displays it.
 function passwordGenerator(length) {
+  console.log("test2");
   while (length > 0) {
     yourPassword += charSet.charAt(Math.floor(Math.random() * charSet.length));
     length--;
     document.querySelector(".yourPass").textContent = yourPassword;
   }
+  //Resets for next random generated password
+  yourPassword = "";
 }
 
 function copyclipboard() {
-  console.log("test");
-
   var copyText = document.querySelector(".yourPass");
-
   copyText.select();
 
   document.execCommand("copy");

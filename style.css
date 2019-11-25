@@ -7,11 +7,10 @@ body {
   width: 50%;
 }
 
-.passwordBox {
-  border: 2px dashed lightslategray;
-  width: 100vw;
-  height: 100px;
+.yourPass {
+  border: 1px dashed lightslategray;
   text-align: center;
+  margin: 0 auto;
 }
 
 hr {
