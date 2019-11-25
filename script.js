@@ -1,5 +1,8 @@
-const charSet =
-  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01233456789";
+let charSet = "";
+const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbersSet = "0123456789";
+const specialChars = "!@#$%^&*()[]";
 var yourPassword = "";
 var numbers;
 var reset = "";
@@ -7,9 +10,29 @@ var reset = "";
 // Function prompst user for password length
 function question() {
   numbers = prompt("How long do you want your password?");
-  //Calls the function that generates the password and disiplays
+  if (numbers < 8) {
+    alert("Password must be greater than 8 characters");
+  } else {
+    var caps = confirm("Use uppercase characters?");
+    if (caps) {
+      charSet += upperCase;
+    }
+    var lower = confirm("Use lowercase characters?");
+    if (lower) {
+      charSet += lowerCase;
+    }
+    var special = confirm("Use special characters?");
+    if (special) {
+      charSet += specialChars;
+    }
+    var nums = confirm("Use numbers?");
+    if (nums) {
+      charSet += numbersSet;
+    }
+  }
   passwordGenerator(numbers);
 }
+//Calls the function that generates the password and disiplays
 
 //This function generates a random password and displays it.
 function passwordGenerator(length) {
