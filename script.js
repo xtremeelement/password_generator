@@ -7,14 +7,13 @@ var reset = "";
 // Function prompst user for password length
 function question() {
   numbers = prompt("How long do you want your password?");
-
   //Calls the function that generates the password and disiplays
   passwordGenerator(numbers);
 }
 
 //This function generates a random password and displays it.
 function passwordGenerator(length) {
-  console.log("test2");
+  //chooses random letters from the charSet while length is greater than 0
   while (length > 0) {
     yourPassword += charSet.charAt(Math.floor(Math.random() * charSet.length));
     length--;
@@ -24,10 +23,10 @@ function passwordGenerator(length) {
   yourPassword = "";
 }
 
+//Copies password to clipboard
 function copyclipboard() {
   var copyText = document.querySelector(".yourPass");
   copyText.select();
-
   document.execCommand("copy");
   alert(`Copied the text: ${copyText.value}`);
 }
