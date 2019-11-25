@@ -3,22 +3,18 @@ const charSet =
 var yourPassword = "";
 var numbers;
 
+// Function prompst user for password length
 function question() {
-  numbers = prompt("How long do you want your passowrd?");
- 
-
-  passwordGenerator(numbers);
-
-  
+  numbers = prompt("How long do you want your passowrd?"); 
+    //Calls the function that generates the password and disiplays
+  passwordGenerator(numbers);  
 }
 
+//This function generates a random password and displays it.
 function passwordGenerator(length) {
-  console.log(charSet.length);
+  
   while (length > 0) {
-    yourPassword += charSet.charAt(Math.floor(Math.random() * charSet.bit length));
-    console.log(yourPassword);
-    length--;
-    console.log(length);
-    document.querySelector(".yourPass").textContent = yourPassword;
-    
+    yourPassword += charSet.charAt(Math.floor(Math.random() * charSet.length));    
+    length--;    
+    document.querySelector(".yourPass").textContent = yourPassword;    
   }
