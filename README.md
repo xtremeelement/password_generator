@@ -1,7 +1,7 @@
 # password_generator
 
 ## Simple random password generator with length and parameters
-!(https://github.com/xtremeelement/images/blob/master/passwordgen.PNG?raw=true)
+![passwordgen](https://github.com/xtremeelement/images/blob/master/passwordgen.PNG?raw=true)
 - uppercase characters
 - lowercase characters
 - special characters
